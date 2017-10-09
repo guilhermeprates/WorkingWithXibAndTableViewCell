@@ -14,7 +14,6 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    tableView.allowsSelection = false
     tableView.register(CustomTableViewCell.loadNib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
     
     for i in 0..<100 {
