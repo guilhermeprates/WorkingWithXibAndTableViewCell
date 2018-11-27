@@ -6,24 +6,31 @@ struct Item {
 }
 
 class ViewController: UIViewController {
-  
+
+  // MARK: - Properties
+
+  private var items: [Item] = []
+
+  // MARK: - IBOutlets
+
   @IBOutlet weak var tableView: UITableView!
   
-  var items: [Item] = []
+  // MARK: - View life cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    tableView.register(CustomTableViewCell.loadNib(), forCellReuseIdentifier: CustomTableViewCell.identifier)
-    
+
     for i in 0..<100 {
       items.append(Item(id: i, name: "Item \(i)"))
     }
-    
+
+    tableView.register(CustomTableViewCell.loadNib(),
+                       forCellReuseIdentifier: CustomTableViewCell.identifier)
   }
   
 }
 
+// MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -32,6 +39,7 @@ extension ViewController: UITableViewDelegate {
   
 }
 
+// MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,12 +47,12 @@ extension ViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell else {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier,
+                                                   for: indexPath) as? CustomTableViewCell else {
       return UITableViewCell()
     }
-    
-    let item = items[indexPath.row]
-    cell.setData(item)
+
+    cell.nameLabel.text = items[indexPath.row].name
     
     return cell
   }

@@ -12,10 +12,10 @@
 		5626DAB21F86A74D006F8739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5626DAB01F86A74D006F8739 /* Main.storyboard */; };
 		5626DAB41F86A74D006F8739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5626DAB31F86A74D006F8739 /* Assets.xcassets */; };
 		5626DAB71F86A74D006F8739 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5626DAB51F86A74D006F8739 /* LaunchScreen.storyboard */; };
-		5626DABF1F86A963006F8739 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626DABE1F86A963006F8739 /* BaseTableViewCell.swift */; };
-		5626DAC11F86AABB006F8739 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626DAC01F86AABB006F8739 /* UIView+.swift */; };
+		5626DAC11F86AABB006F8739 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626DAC01F86AABB006F8739 /* UIView.swift */; };
 		5626DAC41F86AB6F006F8739 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626DAC21F86AB6F006F8739 /* CustomTableViewCell.swift */; };
 		5626DAC51F86AB6F006F8739 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5626DAC31F86AB6F006F8739 /* CustomTableViewCell.xib */; };
+		99FCA54421ADAE2C0036CB4F /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FCA54321ADAE2C0036CB4F /* UITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +26,10 @@
 		5626DAB31F86A74D006F8739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5626DAB61F86A74D006F8739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5626DAB81F86A74D006F8739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5626DABE1F86A963006F8739 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		5626DAC01F86AABB006F8739 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		5626DAC01F86AABB006F8739 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		5626DAC21F86AB6F006F8739 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		5626DAC31F86AB6F006F8739 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		99FCA54321ADAE2C0036CB4F /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +65,25 @@
 			isa = PBXGroup;
 			children = (
 				5626DAAC1F86A74D006F8739 /* AppDelegate.swift */,
-				5626DAC01F86AABB006F8739 /* UIView+.swift */,
-				5626DAAE1F86A74D006F8739 /* ViewController.swift */,
-				5626DABE1F86A963006F8739 /* BaseTableViewCell.swift */,
+				5626DAB31F86A74D006F8739 /* Assets.xcassets */,
 				5626DAC21F86AB6F006F8739 /* CustomTableViewCell.swift */,
 				5626DAC31F86AB6F006F8739 /* CustomTableViewCell.xib */,
-				5626DAB01F86A74D006F8739 /* Main.storyboard */,
-				5626DAB31F86A74D006F8739 /* Assets.xcassets */,
-				5626DAB51F86A74D006F8739 /* LaunchScreen.storyboard */,
+				99FCA54521ADAE5E0036CB4F /* Extensions */,
 				5626DAB81F86A74D006F8739 /* Info.plist */,
+				5626DAB51F86A74D006F8739 /* LaunchScreen.storyboard */,
+				5626DAB01F86A74D006F8739 /* Main.storyboard */,
+				5626DAAE1F86A74D006F8739 /* ViewController.swift */,
 			);
 			path = WorkingWithXibAndTableViewCell;
+			sourceTree = "<group>";
+		};
+		99FCA54521ADAE5E0036CB4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				99FCA54321ADAE2C0036CB4F /* UITableViewCell.swift */,
+				5626DAC01F86AABB006F8739 /* UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,11 +113,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Guilherme Prates";
 				TargetAttributes = {
 					5626DAA81F86A74D006F8739 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -151,10 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5626DAC11F86AABB006F8739 /* UIView+.swift in Sources */,
+				5626DAC11F86AABB006F8739 /* UIView.swift in Sources */,
 				5626DAC41F86AB6F006F8739 /* CustomTableViewCell.swift in Sources */,
 				5626DAAF1F86A74D006F8739 /* ViewController.swift in Sources */,
-				5626DABF1F86A963006F8739 /* BaseTableViewCell.swift in Sources */,
+				99FCA54421ADAE2C0036CB4F /* UITableViewCell.swift in Sources */,
 				5626DAAD1F86A74D006F8739 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +204,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -202,6 +212,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -252,6 +263,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -259,6 +271,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -298,7 +311,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guilhermeprates.WorkingWithXibAndTableViewCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -313,7 +326,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guilhermeprates.WorkingWithXibAndTableViewCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

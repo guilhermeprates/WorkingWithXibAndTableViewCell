@@ -1,22 +1,23 @@
 import UIKit
 
-class CustomTableViewCell: BaseTableViewCell {
+class CustomTableViewCell: UITableViewCell {
   
-  @IBOutlet weak var itemNameLabel: UILabel!
-  
-  override func setup() {
-    super.setup()
-    itemNameLabel.textColor = .blue
-  }
-  
-  override func setData(_ data: Any) {
-    if let item = data as? Item {
-      itemNameLabel.text = item.name
+  @IBOutlet weak var nameLabel: UILabel! {
+    didSet {
+       nameLabel.textColor = UIColor.gray
     }
   }
-  
+    
   override class func height() -> CGFloat {
     return 60.0
+  }
+
+  override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+    if highlighted {
+      alpha = 0.4
+    } else {
+      alpha = 1.0
+    }
   }
   
 }
